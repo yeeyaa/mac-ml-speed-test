@@ -47,8 +47,8 @@ if __name__ == "__main__":
 
     # Create argument parser
     parser = argparse.ArgumentParser()
-    parser.add_argument("--batch_sizes", default="16, 32, 64, 128, 256, 512, 1024", help="Delimited list input of batch sizes to test, defaults to '16, 32, 64, 128, 256, 512, 1024'", type=str)
-    parser.add_argument("--epochs", type=int, default=5, help="Number of epochs to train for, default is 5")
+    parser.add_argument("--batch_sizes", default="32", help="Delimited list input of batch sizes to test, defaults to '16, 32, 64, 128, 256, 512, 1024'", type=str)
+    parser.add_argument("--epochs", type=int, default=1, help="Number of epochs to train for, default is 1")
     args = parser.parse_args()
 
     # Convert batch_sizes to list
