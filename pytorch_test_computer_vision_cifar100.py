@@ -220,7 +220,6 @@ if __name__ == "__main__":
                 f"train_loss: {train_loss:.4f} | "
                 f"train_acc: {train_acc:.4f} | "
             )
-
             if eval:
                 print(
                     f"Epoch: {epoch+1} | "
@@ -235,6 +234,10 @@ if __name__ == "__main__":
                 results["test_loss"].append(test_loss)
                 results["test_acc"].append(test_acc)
         
+
+        torch.save(model,'resnet50_cifar100.pth')
+        torch.save(model.state_dict,'resnet50_cifar100_params.pth')
+        print("Now saving model to ./trained_model/resnet50_cifar100.pth")
         return results
     
     def save_results(batch_size_training_results, target_dir="results_pytorch_cv"):
