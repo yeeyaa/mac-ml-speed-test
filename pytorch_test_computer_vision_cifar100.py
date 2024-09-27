@@ -234,10 +234,9 @@ if __name__ == "__main__":
                 results["test_loss"].append(test_loss)
                 results["test_acc"].append(test_acc)
         
-
-        torch.save(model,'resnet50_cifar100.pth')
-        torch.save(model.state_dict,'resnet50_cifar100_params.pth')
-        print("Now saving model to ./trained_model/resnet50_cifar100.pth")
+        torch.save(model,'trained_model/resnet50_cifar100.pth')
+        torch.save(model.state_dict(),'trained_model/resnet50_cifar100_params.pth')
+        print("Now saving model to trained_model/")
         return results
     
     def save_results(batch_size_training_results, target_dir="results_pytorch_cv"):
